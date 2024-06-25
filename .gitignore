@@ -1,0 +1,74 @@
+# <https://github.com/github/gitignore/blob/main/WordPress.gitignore>
+# <https://github.com/roots/bedrock/blob/master/.gitignore>
+
+# Themes
+/wp-content/themes/thematic*/languages
+/wp-content/themes/twenty*/
+
+# Plugins
+/wp-content/plugins/*
+!/wp-content/plugins/index.php
+
+# Must-Use Plugins: track file, ignore dir
+/wp-content/mu-plugins/*/
+
+# Other stuff
+/wp-content/cache
+/wp-content/upgrade
+/wp-content/uploads
+!/wp-content/uploads/.gitkeep
+
+# WordPress Core
+/wp-admin/
+/wp-content/languages
+/wp-includes/
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# WordPress Core in a subdirectory:
+/wp/
+
+# Allow wp-config.php; secrets offloaded to environment
+!/wp-config.php
+
+# Logs
+*.log
+
+# Data
+/private/data/*
+!/private/data/.gitkeep
+*.sql
+
+# Secrets
+auth.json
+.env
+.env.*
+!.env.example
+.ssh
+*.pem
+
+# Dependencies
+bower_components/
+node_modules/
+vendor
+
+# Context-specific
+.cache
+.data
+.direnv
+.local
+.php-cs-fixer.cache
+.pre-commit-config.yaml
+wp-cli.local.yml
+
+# Requires hard-coding absolute paths to stub files
+# <https://github.com/phpactor/phpactor/issues/2665>
+.phpactor.json
+
+# Build artifacts
+result
+
+# Plugin: Query Monitor
+/wp-content/db.php

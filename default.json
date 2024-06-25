@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>kleinweb/renovate-config:frontend",
+    "github>kleinweb/renovate-config:wordpress"
+  ]
+}

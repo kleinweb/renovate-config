@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>kleinweb/renovate-config:base",
+    "group:postcss",
+    "group:typescript-eslintMonorepo",
+    "group:wordpressMonorepo"
+  ],
+  "addLabels": ["automated", "scope:deps"],
+  "packageRules": [
+    {
+      "description": "Group Alpine.js and its plugins",
+      "matchDepTypes": ["dependencies"],
+      "matchPackagePatterns": ["^alpinejs$", "^@alpinejs/"],
+      "groupName": "alpine.js",
+      "semanticCommitScope": "deps|siteNav"
+    },
+    {
+      "description": "Group Roots/Bud/Sage Node dev dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchPackagePatterns": ["^@roots/"],
+      "groupName": "@roots/bud monorepo"
+    }
+  ]
+}

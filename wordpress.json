@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>kleinweb/renovate-config:base",
+    "group:illuminate",
+    "group:phpstan"
+  ],
+  "addLabels": ["automated", "scope:deps"],
+  "packageRules": [
+    {
+      "description": "Adjust semantic commit scope for WordPress core updates",
+      "matchPackageNames": ["^roots/wordpress"],
+      "semanticCommitScope": "deps|wp:core",
+      "addLabels": ["automated", "scope:deps", "scope:wp:core"]
+    },
+    {
+      "description": "Adjust semantic commit scope for required WordPress plugin updates",
+      "matchDepTypes": ["require"],
+      "matchPackagePatterns": [
+        "^wpackagist-plugin",
+        "^deliciousbrains-plugin",
+        "advanced-custom-fields",
+        "alleyinteractive/internal-flags",
+        "alleyinteractive/meta-inspector"
+      ],
+      "addLabels": ["automated", "scope:deps", "scope:wp:plugins"],
+      "semanticCommitScope": "deps|wp:plugin"
+    },
+    {
+      "description": "Check for essential server-side application updates anytime",
+      "matchDepTypes": ["require"],
+      "matchPackagePatterns": [
+        "^wpackagist-plugin",
+        "^deliciousbrains-plugin",
+        "advanced-custom-fields",
+        "^roots"
+      ],
+      "schedule": null
+    }
+  ]
+}
