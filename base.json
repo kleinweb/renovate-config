@@ -8,6 +8,7 @@
     ":semanticCommits",
     ":semanticCommitScope(deps)",
     ":semanticPrefixFixDepsChoreOthers",
+    "customManagers:biomeVersions",
     "group:linters",
     "schedule:automergeDaily",
     "schedule:earlyMondays",
