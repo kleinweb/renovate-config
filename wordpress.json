@@ -27,10 +27,18 @@
       "semanticCommitScope": "deps|wp:plugin"
     },
     {
+      "description": "Adjust semantic commit scope for WordPress theme updates",
+      "matchDepTypes": ["require"],
+      "matchPackagePatterns": ["^wpackagist-theme"],
+      "addLabels": ["automated", "scope:deps", "scope:wp:themes"],
+      "semanticCommitScope": "deps|wp:theme"
+    },
+    {
       "description": "Check for essential server-side application updates anytime",
       "matchDepTypes": ["require"],
       "matchPackagePatterns": [
         "^wpackagist-plugin",
+        "^wpackagist-theme",
         "^deliciousbrains-plugin",
         "advanced-custom-fields",
         "^roots"
